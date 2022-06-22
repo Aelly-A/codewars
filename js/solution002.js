@@ -1,18 +1,18 @@
 function accum(s) {
-	let n = ''
+	let final = ''
     s.split('').forEach((x,i) => {
     let temp = ''
     x = x.toLowerCase()
     for(let j = -1; j < i; j++){
         temp += x
     }
-    if(n.length != 0){
-        n += '-' + capitalizeFirstLetter(temp)
+    if(final.length != 0){
+        final += '-' + capitalizeFirstLetter(temp)
     } else{
-        n += capitalizeFirstLetter(temp)
+        final += capitalizeFirstLetter(temp)
     }
   })
-  return n
+  return final
 }
 
 function capitalizeFirstLetter(string) {
